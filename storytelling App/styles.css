@@ -34,7 +34,7 @@ h1 {
 .story-container {
     margin: auto;
     padding: 10px;
-    width: 80%;
+    width: 50%;
     border-style: double;
     border-width: 14px;
     border-color: var(--white);
