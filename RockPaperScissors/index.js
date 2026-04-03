@@ -1,44 +1,42 @@
-let playGame = confirm("shall we play Rock paper Scissors?");
+let playGame = confirm("shall we play rock, paper, scissors?");
 
 if (playGame) {
-  let playerChoice = prompt("Enter Rock, Paper or Scissors.");
-  if (playerChoice) {
-    let firstPlayer = playerChoice.trim().toLowerCase();
-    if (
-      firstPlayer === "rock" ||
-      firstPlayer === "paper" ||
-      firstPlayer === "scissors"
-    ) {
-      let computerChoice = Math.floor(Math.random() * 3 + 1);
-      let computer =
-        computerChoice === 1
-          ? "rock"
-          : computerChoice === 2
-            ? "paper"
-            : "scissors";
+  while (playGame) {
+    const playerChoice = prompt("please enter 'rock', 'paper', or 'scissors'");
+    if (playerChoice || playerChoice === "") {
+      const firstPlayer = playerChoice.trim().toLowerCase();
+      if (
+        firstPlayer === "rock" ||
+        firstPlayer === "paper" ||
+        firstPlayer === "scissors"
+      ) {
+        const computerChoice = Math.floor(Math.random() * 3);
+        const choiceArray = ["rock", "paper", "scissors"];
+        const computer = choiceArray[computerChoice];
 
-      let results =
-        firstPlayer === computer
-          ? "Tie Game"
-          : firstPlayer === "rock" && computer === "paper"
-            ? `FirstPlayer: ${firstPlayer} \nComputer: ${computer}
-            \nComputer Wins!`
-            : firstPlayer === "paper" && computer === "scissors"
-            ? `FirstPlayer: ${firstPlayer} \nComputer: ${computer}
-            \nComputer Wins!`
-            : firstPlayer === "scissors" && computer === "rock" ? `FirstPlayer: ${firstPlayer} \nComputer: ${computer}
-            \nComputer Wins!`
-            : `FirstPlayer: ${firstPlayer} \nComputer: ${computer}
-            \nFirstPlayer Wins!`
-     alert(results);
-     let playAgain = confirm("Play Again");
-     playAgain ? location.reload(): alert("Okay Thank you for Playing.")
+        const result =
+          firstPlayer === computer
+            ? "Tie game"
+            : firstPlayer === "rock" && computer === "paper"
+              ? `firstPlayer: ${firstPlayer} \nComputer: ${computer} \nComputer Wins`
+              : firstPlayer === "paper" && computer === "scissors"
+                ? `firstPlayer: ${firstPlayer} \nComputer: ${computer} \nComputer Wins`
+                : firstPlayer === "scissors" && computer === "rock"
+                  ? `firstPlayer: ${firstPlayer} \nComputer: ${computer} \nComputer Wins`
+                            : `firstPlayer: ${firstPlayer} \nComputer: ${computer} \firstPlayer Wins`;
+          alert(result);
+          playGame = confirm("play Again");
+          if (!playGame) alert("Ok, thanks for playing.");
+          continue;
+      } else {
+          alert("you din't enter rock, paper, or scissors.");
+          continue;
+      }
     } else {
-      alert("You did not enter 'rock', 'paper' or 'scissors'.");
+        alert("I guess you changed your mind. Maybe next time.");
+        break;
     }
-  } else {
-    alert("Looks like you changed your mind. Maybe next time.");
   }
 } else {
-  alert("Maybe next time.");
+  alert("maybe next time");
 }
