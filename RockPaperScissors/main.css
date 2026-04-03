@@ -19,6 +19,14 @@ main {
   align-items: center;
 }
 
-h1 {
-  font-size: 250%;
+h1, p {
+  font-size: 200%;
+  text-align: center;
+}
+
+button{
+  background-color: aqua;
+  width: 200px;
+  height: 80px;
+  border-radius: 30px;
 }
