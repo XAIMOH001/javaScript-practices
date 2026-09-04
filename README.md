@@ -64,13 +64,4 @@ All projects and exercises are based on the **freeCodeCamp.org JavaScript Course
 
 **Course Reference:** [freeCodeCamp JavaScript Course](https://www.freecodecamp.org/)
 
-## 📝 Projects Included
-
-Each folder/project in this repository demonstrates practical applications of JavaScript concepts learned in the course curriculum.
-
-## 💡 How to Use This Repository
-
-- **For Learning:** Review each project to understand different JavaScript patterns and techniques
-- **For Reference:** Use as a reference guide for common JavaScript implementations
-- **For Practice:** Modify and extend projects to deepen your understanding
 
